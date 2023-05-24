@@ -1,11 +1,25 @@
+import styled from "styled-components"
 import { Button, Title } from "../common/CommonStyles"
-import { StyledNavBarContainer } from "./NavBar.styles"
+import { MenuContainer } from "../common/leftMenu/MenuContainer"
 
 export const NavBar = () => {
   return (
-   <StyledNavBarContainer>
-    <Title>Felipe Calvache</Title>
-    <Button>Contacto</Button>
-   </StyledNavBarContainer>
+    <Wrapper>
+      {/* <Title style={{ pointerEvents: 'none' }}>Felipe Calvache</Title> */}
+      {/* <Button style={{ pointerEvents: 'none' }}>Contact</Button> */}
+      <MenuContainer/>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.header`
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    position: fixed;
+    left: calc(50% - 657px/2);
+    
+    /* border: solid red; */
+    /* background-color: black; */
+`

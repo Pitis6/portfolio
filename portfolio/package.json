@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^0.9.336",
+    "@splinetool/runtime": "^0.9.340",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.10"
