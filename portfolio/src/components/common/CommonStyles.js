@@ -7,9 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: grey;
         display: flex;
         justify-content: space-between;
-        
         flex-direction:column;
-        
     }
 `
 
@@ -21,7 +19,14 @@ export const Title = styled.h1`
     font-size: 100px;
 `
 
-export const Title2 = styled(Title)`
+export const Title2 = styled.h2`
+color: white;
+font-size: 40px;
+text-align: center;
+`
+
+export const P = styled.p`
+    color: white;
     font-size: 1rem;
     font-weight: 200;
 `
@@ -44,7 +49,5 @@ export const Button = styled.button`
     &:hover {
     background-color: rgba(85, 219, 69);
     font-weight: 600;
-
-
     }
     `

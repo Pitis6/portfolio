@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Button, Title } from "../common/CommonStyles"
 import { MenuContainer } from "../common/leftMenu/MenuContainer"
 
 export const NavBar = () => {

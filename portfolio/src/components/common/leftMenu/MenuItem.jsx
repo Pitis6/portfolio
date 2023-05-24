@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import { Title2 } from "../CommonStyles"
+import { P } from "../CommonStyles"
 
 
 export const MenuItem = ({item}) => {
     return (
         <Wrapper>
-            <Title2>{item}</Title2>
+            <P>{item}</P>
         </Wrapper>
     )
 }
