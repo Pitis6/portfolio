@@ -38,7 +38,7 @@ border-radius:20px;
 // `
 
 const Image = styled.img`
-max-width: 65%;
+max-width: 55%;
 height: auto;
 `
 

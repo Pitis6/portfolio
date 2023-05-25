@@ -4,7 +4,6 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Sono', sans-serif;
-        background-color: grey;
         display: flex;
         justify-content: space-between;
         flex-direction:column;
@@ -23,6 +22,7 @@ export const Title2 = styled.h2`
 color: white;
 font-size: 40px;
 text-align: center;
+font-weight: 300;
 `
 
 export const P = styled.p`
