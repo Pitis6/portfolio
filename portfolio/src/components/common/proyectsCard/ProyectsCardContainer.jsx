@@ -9,12 +9,12 @@ const data = [
   {
     title: 'Rent car E-comerce',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at, ducimus magnam ullam optio qui deserunt sunt magni repellat minima! Corporis error, modi unde ad praesentium vel cupiditate aut sed!',
-    videoPath: 'rentCar.mp4' 
+    videoPath: 'rentCar.gif' 
   },
   {
     title: 'To do List',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at, ducimus magnam ullam optio qui deserunt sunt magni repellat minima! Corporis error, modi unde ad praesentium vel cupiditate aut sed!',
-    videoPath: 'audiophile.mp4' 
+    videoPath: 'toDo.gif' 
   }
 ]
 

@@ -4,7 +4,7 @@ import { Button, P, Title2 } from "../CommonStyles"
 export const ProyectsCard = ({ data, index }) => {
   return (
     <Wrapper index={index}>
-      <Image style={{borderRadius:'10px'}} src="audiophile.gif" alt= 'imagen' />
+      <Image  src={data.videoPath} alt= 'imagen' />
       {/* <Video controls>
         <source src={data.videoPath} type="video/mp4" style={{ borderRadius: '10px' }} />
       </Video> */}

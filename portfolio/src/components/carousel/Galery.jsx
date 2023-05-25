@@ -1,5 +1,4 @@
 // import image from '../../../public/fotoLinkedIn.png';
-import arbol from '../../../public/tree.jpg'
 import styled from 'styled-components';
 
 

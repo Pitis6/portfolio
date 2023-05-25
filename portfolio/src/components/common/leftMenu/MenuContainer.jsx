@@ -22,10 +22,7 @@ align-items: center;
 gap: 40px;
 margin-top: 10px;
 border-radius: 68px;
-padding: 10px 20px;
-/* background-color: black; */
+padding: 0px 20px;
 background-color:rgba(31,32,35,.5);
 backdrop-filter: blur(2px);
-/* z-index: 1; */
-
 `

@@ -35,9 +35,9 @@ export const P = styled.p`
 export const Button = styled.button`
     /* background:none; */
     /* border:solid 1px white; */
-    height:50px;
+    /* height:50px; */
     width:150px;
-    padding:10px;
+    padding:5px;
     font-weight: 200;
     border-radius:50px;
     font-size:1rem;
