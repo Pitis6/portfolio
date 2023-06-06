@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         flex-direction:column;
         background-color: black;
         color: white;
+        box-sizing: border-box;
     }
 `;
 
@@ -25,6 +26,12 @@ export const Title2 = styled.h2`
   text-align: center;
   font-weight: 300;
 `;
+
+export const Title3 = styled.h3`
+font-size: 30px;
+text-align: left;
+font-weight: 500;
+`
 
 export const P = styled.p`
   color: white;

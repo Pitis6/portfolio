@@ -3,9 +3,31 @@ import { Button } from "../CommonStyles";
 import { MenuItem } from "./MenuItem";
 
 export const MenuContainer = () => {
+
+  const items = [
+    {
+      label: "Home",
+      route: "/",
+    },
+    {
+      label: "Proyects",
+      route: "/proyects",
+    },
+    {
+      label: "Education",
+      route: "/education",
+    },
+    {
+      label: "Skills",
+      route: "/skills",
+    },
+  ];
   return (
     <Wrapper>
-      <MenuItem />
+      {items.map(item => (
+      <MenuItem key={item.label} item={item}/>
+      ))}
+
       <Button>Contact Me</Button>
     </Wrapper>
   );

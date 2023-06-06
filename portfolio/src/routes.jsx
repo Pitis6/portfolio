@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { LayoutContainer } from "./components/layout/LayoutContainer";
 import { ErrorPage } from "./components/errorPage/ErrorPage";
-import RandomContainer from "./components/randomProyects/RandomContainer";
 import { Home } from "./pages/Home";
 import { Skills } from './pages/Skills';
+import { ProyectsDetailContainer } from './components/common/proyectsDetail/ProyectsDetailContainer';
 // import { Scene } from "./components/Scene";
 
 export const routes = createBrowserRouter([
@@ -19,7 +19,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/proyects",
-        element: <RandomContainer />,
+        element: <ProyectsDetailContainer />,
       },
       {
         path: "/skills",

@@ -1,37 +1,15 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const MenuItem = () => {
+export const MenuItem = ({item}) => {
   return (
     <Wrapper>
-      {/* <P>{item}</P> */}
       <Link
-        key={"/home"}
-        to={"/"}
+        key={item.label}
+        to={item.route}
         style={{ textDecorationLine: "none", color: "white" }}
       >
-        Home
-      </Link>
-      <Link
-        key={"/proyects"}
-        to={"/proyects"}
-        style={{ textDecorationLine: "none", color: "white" }}
-      >
-        Proyects
-      </Link>
-      <Link
-        key={"/education"}
-        to={"/education"}
-        style={{ textDecorationLine: "none", color: "white" }}
-      >
-        Education
-      </Link>
-      <Link
-        key={"/skills"}
-        to={"/skills"}
-        style={{ textDecorationLine: "none", color: "white" }}
-      >
-        Skills
+        {item.label}
       </Link>
     </Wrapper>
   );

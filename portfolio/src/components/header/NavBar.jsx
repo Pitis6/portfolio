@@ -16,5 +16,6 @@ const Wrapper = styled.header`
     /* padding:30px; */
     margin: 20px;
     position: fixed;
-    left: calc(50% - 657px/2);
+    left: 50%;
+    translate: -50%;
 `
