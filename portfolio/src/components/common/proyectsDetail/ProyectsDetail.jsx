@@ -3,11 +3,19 @@ import { Button, P, Title3 } from "../CommonStyles";
 import { useState } from "react";
 
 export const ProyectsDetail = ({ proyects }) => {
+  //consumir el indice del context e inicializar el estado.
   const [proyectIndex, setProyectIndex] = useState(0);
 
-  const handleClick = (value) => {
+  const handleClickArrow = (value) => {
     setProyectIndex(proyectIndex + value);
   };
+
+  const handleClickButton = () => {
+    event.preventDefault();
+    console.log(event.target.href);
+
+    window.open(proyects[proyectIndex].url, "_blank");
+  }
 
   return (
     <Wrapper>
@@ -16,32 +24,29 @@ export const ProyectsDetail = ({ proyects }) => {
         {proyectIndex === 0 ? (
           <Arrow
             style={{ visibility: "hidden" }}
-            onClick={() => handleClick(1)}
+            onClick={() => handleClickArrow(1)}
           >{`<`}</Arrow>
         ) : (
-          <Arrow onClick={() => handleClick(-1)}>{`<`}</Arrow>
+          <Arrow onClick={() => handleClickArrow(-1)}>{`<`}</Arrow>
         )}
         {proyectIndex === proyects.length - 1 ? (
           <Arrow
             style={{ visibility: "hidden" }}
-            onClick={() => handleClick(1)}
+            onClick={() => handleClickArrow(1)}
           >{`<`}</Arrow>
         ) : (
-          <Arrow onClick={() => handleClick(1)}>{`>`}</Arrow>
+          <Arrow onClick={() => handleClickArrow(1)}>{`>`}</Arrow>
         )}
       </ArrowDiv>
       <Description>
         <Information>
           <Title3 style={{ marginTop: "0px" }}>{proyects[proyectIndex].title}</Title3>
           <P>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
-            ab neque inventore, necessitatibus eum, repellendus sequi laborum
-            porro perspiciatis facilis corporis autem, laboriosam molestias
-            consectetur. Hic facere cumque porro qui.
+            {proyects[proyectIndex].description}
           </P>
         </Information>
         <ButtonContainer>
-          <Button>Visit web site</Button>
+          <Button onClick={handleClickButton}>Visit web site</Button>
         </ButtonContainer>
       </Description>
     </Wrapper>

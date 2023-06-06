@@ -1,30 +1,17 @@
 import styled from "styled-components"
 import { ProyectsDetail } from "./ProyectsDetail"
+import { data } from "../../../utils/data";
 
 export const ProyectsDetailContainer = () => {
 
-    const proyects = [
-        {
-            title: 'To-Do App',
-            image: 'toDo.png'
-        },
-        {
-            title: 'Audio E-comerce',
-            image: 'audioPhile.png'
-        },
-        {
-            title: 'Rent a Car E-comerce',
-            image: 'rentCar.png'
-        },
-    ]
+   
 
   return (
     <Wrapper>
-      <ProyectsDetail proyects={proyects} />
+      <ProyectsDetail proyects={data} />
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.div`
 width: 80%;
