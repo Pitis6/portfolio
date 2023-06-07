@@ -5,7 +5,7 @@ import { MyContext } from "../../../context/Context";
 
 export const ProyectsDetail = ({ proyects }) => {
   //consumir el indice del context e inicializar el estado.
-  const  value = useContext(MyContext);
+  const value = useContext(MyContext);
   const [proyectIndex, setProyectIndex] = useState(value.proyectIndex);
 
   const handleClickArrow = (value) => {
@@ -15,7 +15,7 @@ export const ProyectsDetail = ({ proyects }) => {
   const handleClickButton = () => {
     event.preventDefault();
     window.open(proyects[proyectIndex].url, "_blank");
-  }
+  };
 
   return (
     <Wrapper>
@@ -40,10 +40,10 @@ export const ProyectsDetail = ({ proyects }) => {
       </ArrowDiv>
       <Description>
         <Information>
-          <Title3 style={{ marginTop: "0px" }}>{proyects[proyectIndex].title}</Title3>
-          <P>
-            {proyects[proyectIndex].description}
-          </P>
+          <Title3 style={{ marginTop: "0px" }}>
+            {proyects[proyectIndex].title}
+          </Title3>
+          <P>{proyects[proyectIndex].description}</P>
         </Information>
         <ButtonContainer>
           <Button onClick={handleClickButton}>Visit web</Button>
@@ -54,19 +54,24 @@ export const ProyectsDetail = ({ proyects }) => {
 };
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid; */
   height: 100%;
   z-index: -1;
 `;
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  /* height: 100%; */
   border-radius: 16px;
 `;
 
 const ArrowDiv = styled.div`
+  /* border: solid; */
   display: flex;
   gap: 30px;
-  justify-content:center;
+  justify-content: center;
   margin: 30px 0px;
 `;
 const Arrow = styled.div`
@@ -90,6 +95,7 @@ const Arrow = styled.div`
 `;
 
 const Description = styled.section`
+  width: 90%;
   display: flex;
   /* border: solid 1px green; */
   justify-content: space-between;
@@ -99,8 +105,8 @@ const Information = styled.div`
   /* border: solid 1px purple; */
 `;
 const ButtonContainer = styled.div`
-display: flex;
-margin-right: 100px;
+  display: flex;
+  margin-right: 100px;
   /* border: solid 1px; */
   align-items: center;
 `;

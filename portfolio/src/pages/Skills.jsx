@@ -42,7 +42,7 @@ export const Skills = () => {
     <Wrapper>
       {Object.entries(skills).map(([key, value]) => (
         <SkillCard key={key}>
-          <Title2 style={{ textAlign: "center", margin:'15px 0px' }}>
+          <Title2 style={{ textAlign: "center", margin: "15px 0px" }}>
             {capitalizeFirstLetter(key)}
           </Title2>
           <UlDiv>
@@ -75,10 +75,17 @@ const SkillCard = styled.article`
   /* border: solid red; */
   padding: 0px 50px;
   width: 50%;
-  box-shadow: 0 4px 4px 5px rgba(255, 255, 255, 0.5);
+  /* box-shadow: 0 4px 4px 5px rgba(255, 255, 255, 0.5); */
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset,
+    rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset,
+    rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset,
+    rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
+    rgba(255, 255, 255, 0.09) 0px 8px 4px,
+    rgba(255, 255, 255, 0.09) 0px 16px 8px,
+    rgba(255, 255, 255, 0.09) 0px 32px 16px;
 
   /* &::before {
     content: "";
