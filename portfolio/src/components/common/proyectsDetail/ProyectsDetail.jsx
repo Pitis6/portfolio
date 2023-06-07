@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { Button, P, Title3 } from "../CommonStyles";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { MyContext } from "../../../context/Context";
 
 export const ProyectsDetail = ({ proyects }) => {
   //consumir el indice del context e inicializar el estado.
-  const [proyectIndex, setProyectIndex] = useState(0);
+  const  value = useContext(MyContext);
+  const [proyectIndex, setProyectIndex] = useState(value.proyectIndex);
 
   const handleClickArrow = (value) => {
     setProyectIndex(proyectIndex + value);
@@ -12,8 +14,6 @@ export const ProyectsDetail = ({ proyects }) => {
 
   const handleClickButton = () => {
     event.preventDefault();
-    console.log(event.target.href);
-
     window.open(proyects[proyectIndex].url, "_blank");
   }
 
@@ -46,7 +46,7 @@ export const ProyectsDetail = ({ proyects }) => {
           </P>
         </Information>
         <ButtonContainer>
-          <Button onClick={handleClickButton}>Visit web site</Button>
+          <Button onClick={handleClickButton}>Visit web</Button>
         </ButtonContainer>
       </Description>
     </Wrapper>
@@ -65,7 +65,8 @@ const Image = styled.img`
 
 const ArrowDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content:center;
   margin: 30px 0px;
 `;
 const Arrow = styled.div`
@@ -98,5 +99,8 @@ const Information = styled.div`
   /* border: solid 1px purple; */
 `;
 const ButtonContainer = styled.div`
+display: flex;
+margin-right: 100px;
   /* border: solid 1px; */
+  align-items: center;
 `;

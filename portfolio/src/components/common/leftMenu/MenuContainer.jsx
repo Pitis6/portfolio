@@ -22,6 +22,7 @@ export const MenuContainer = () => {
       route: "/skills",
     },
   ];
+  
   return (
     <Wrapper>
       {items.map(item => (
@@ -38,7 +39,6 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 40px;
-  /* margin-top: 5px; */
   border-radius: 68px;
   padding: 0px 20px;
   background-color: rgba(31, 32, 35, 0.5);

@@ -1,15 +1,17 @@
 import styled from "styled-components";
 import { Button, P, Title2 } from "../CommonStyles";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { MyContext } from "../../../context/Context";
 
 
 export const ProyectsCard = ({ data, index }) => {
 
   const goToProyects = useNavigate()
-
+  const contextValues = useContext(MyContext)
  const handleClick = (event) => {
    event.preventDefault();
-   // aca setear el context con el indice
+   contextValues.updateProyectIndex(index)
    goToProyects('/proyects')
  };
 

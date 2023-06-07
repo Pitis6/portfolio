@@ -37,6 +37,7 @@ export const P = styled.p`
   color: white;
   font-size: 1rem;
   font-weight: 200;
+  text-align: justify;
 `;
 
 export const Button = styled.button`

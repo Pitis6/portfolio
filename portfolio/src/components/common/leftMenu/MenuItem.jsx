@@ -1,13 +1,26 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
 
-export const MenuItem = ({item}) => {
+export const MenuItem = ({ item }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    pathname === item.route ? setIsActive(true) : setIsActive(false);
+  }, [pathname]);
+
   return (
     <Wrapper>
       <Link
         key={item.label}
         to={item.route}
-        style={{ textDecorationLine: "none", color: "white" }}
+        style={{
+          textDecorationLine: "none",
+          color: isActive ? "rgba(85, 219, 69)" : "white",
+        }}
       >
         {item.label}
       </Link>
@@ -19,9 +32,4 @@ const Wrapper = styled.div`
   padding: 15px;
   display: flex;
   gap: 20px;
-  /* padding-right: 20px; */
-  /* padding-left: 100px; */
-  /* border-radius: 0 10px 10px 0; */
-  /* border-right: solid 1px white; */
-  /* transition: border 1s linear; */
 `;
