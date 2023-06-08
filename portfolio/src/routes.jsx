@@ -4,6 +4,7 @@ import { ErrorPage } from "./components/errorPage/ErrorPage";
 import { Home } from "./pages/Home";
 import { Skills } from './pages/Skills';
 import { ProyectsDetailContainer } from './components/common/proyectsDetail/ProyectsDetailContainer';
+import { Contact } from './pages/Contact';
 // import { Scene } from "./components/Scene";
 
 export const routes = createBrowserRouter([
@@ -24,6 +25,10 @@ export const routes = createBrowserRouter([
       {
         path: "/skills",
         element: <Skills />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

@@ -29,15 +29,6 @@ export const Footer = () => {
             <FaLinkedinIn />
           </A>
         </Li>
-        <Li>
-          <A
-            href="https://www.linkedin.com/in/felipe-calvache"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {/* <TbWorldWww /> */}
-          </A>
-        </Li>
       </Ul>
     </Wrapper>
   );
@@ -51,7 +42,11 @@ const Wrapper = styled.footer`
   background-color: black;
   color: white;
   border-image-slice: 1;
-  border-image-source: radial-gradient(circle at center, white, black);
+  border-image-source: radial-gradient(
+    circle at center,
+    rgba(85, 219, 69),
+    black
+  );
 `;
 const Ul = styled.ul`
   display: flex;

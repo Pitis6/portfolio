@@ -4,16 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { MyContext } from "../../../context/Context";
 
-
 export const ProyectsCard = ({ data, index }) => {
-
-  const goToProyects = useNavigate()
-  const contextValues = useContext(MyContext)
- const handleClick = (event) => {
-   event.preventDefault();
-   contextValues.updateProyectIndex(index)
-   goToProyects('/proyects')
- };
+  const goToProyects = useNavigate();
+  const contextValues = useContext(MyContext);
+  
+  const handleClick = (event) => {
+    event.preventDefault();
+    contextValues.updateProyectIndex(index);
+    goToProyects("/proyects");
+  };
 
   return (
     <Wrapper index={index}>
@@ -21,9 +20,7 @@ export const ProyectsCard = ({ data, index }) => {
       <TextWrapper>
         <Title2>{data.title}</Title2>
         <P>{data.description}</P>
-        <Button onClick={handleClick}>
-            See more
-        </Button>
+        <Button onClick={handleClick}>See more</Button>
       </TextWrapper>
     </Wrapper>
   );

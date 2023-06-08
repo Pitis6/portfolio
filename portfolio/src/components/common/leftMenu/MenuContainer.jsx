@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { Button } from "../CommonStyles";
 import { MenuItem } from "./MenuItem";
+import { useNavigate } from "react-router-dom";
 
 export const MenuContainer = () => {
 
+  const goToContact = useNavigate()
   const items = [
     {
       label: "Home",
@@ -23,13 +25,13 @@ export const MenuContainer = () => {
     },
   ];
   
+  
   return (
     <Wrapper>
-      {items.map(item => (
-      <MenuItem key={item.label} item={item}/>
+      {items.map((item) => (
+        <MenuItem key={item.label} item={item} />
       ))}
-
-      <Button>Contact Me</Button>
+      <Button onClick={() => goToContact('/contact')}>Contact Me</Button>
     </Wrapper>
   );
 };

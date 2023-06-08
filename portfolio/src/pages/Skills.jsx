@@ -30,7 +30,7 @@ export const Skills = () => {
       "MongoDB",
       "Postman",
       "JUnit",
-      "Git y GitHub",
+      "Git & GitHub",
     ],
   };
 
@@ -64,6 +64,7 @@ export const Skills = () => {
 };
 
 const Wrapper = styled.div`
+  min-height: 420px;
   margin: 100px 0px;
   display: flex;
   gap: 50px;
@@ -72,10 +73,8 @@ const Wrapper = styled.div`
 `;
 
 const SkillCard = styled.article`
-  /* border: solid red; */
   padding: 0px 50px;
   width: 50%;
-  /* box-shadow: 0 4px 4px 5px rgba(255, 255, 255, 0.5); */
   position: relative;
   overflow: hidden;
   border-radius: 10px;
