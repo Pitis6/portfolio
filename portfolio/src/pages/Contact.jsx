@@ -1,14 +1,35 @@
 import styled from "styled-components";
 import { Button, Title2 } from "../components/common/CommonStyles";
+import createMessage from "../services/messges";
+import { Modal } from "../components/common/modal/Modal";
+import { useState } from "react";
+import { useEffect } from "react";
 
+// window.addEventListener("click",setMessageStatus(false));
 export const Contact = () => {
+  const [messageStatus, setMessageStatus] = useState(false);
+  const [fields, setFields] = useState({})
+
+  useEffect(() => {
+    const handleClick = () => {
+      setMessageStatus(false);
+    };
+
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    const fields = Object.fromEntries(new window.FormData(event.target))
-    console.log(fields)
-    event.target.reset()
-  }
+    event.preventDefault();
+    let form = Object.fromEntries(new window.FormData(event.target));
+    setFields(form)
+    const res = createMessage(fields);
+    setMessageStatus(res)
+    event.target.reset();
+  };
   return (
     <Wrrapper>
       <Form onSubmit={handleSubmit}>
@@ -18,6 +39,7 @@ export const Contact = () => {
         <TextArea name="message" maxLength="1000" />
         <Button type="submit">Send</Button>
       </Form>
+      {messageStatus ? <Modal fields={fields}/> : ""}
     </Wrrapper>
   );
 };
