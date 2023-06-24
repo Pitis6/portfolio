@@ -4,7 +4,7 @@ import { useState } from "react";
 const MyContext = React.createContext();
 
 const MyContextProvider = ({ children }) => {
-  // Define the state or values you want to share
+
 
   const [proyectIndex, setProyectIndex] = useState(0);
 

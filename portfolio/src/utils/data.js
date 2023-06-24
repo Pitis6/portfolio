@@ -23,4 +23,12 @@ export const data = [
     videoPath: "toDo.gif",
     url: "http://todoappdh.s3-website.us-east-2.amazonaws.com",
   },
+  {
+    title: "Swagger",
+    description:
+      "",
+    image: "",
+    videoPath: "",
+    url: "http://todoappdh.s3-website.us-east-2.amazonaws.com",
+  },
 ];
