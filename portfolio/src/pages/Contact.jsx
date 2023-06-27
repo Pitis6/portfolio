@@ -34,7 +34,6 @@ export const Contact = () => {
   };
   return (
     <Wrrapper>
-      <Title2>{JSON.stringify(fields)}</Title2>
       <Form onSubmit={handleSubmit}>
         <Title2 style={{ marginBottom: "0px" }}>Get in touch</Title2>
         <Input name="name" type="text" placeholder="Full name" />
