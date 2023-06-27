@@ -35,7 +35,7 @@ export const Contact = () => {
       <Form onSubmit={handleSubmit}>
         <Title2 style={{ marginBottom: "0px" }}>Get in touch</Title2>
         <Input name="name" type="text" placeholder="Full name" />
-        <Input name="email" type="email" placeholder="Email" />
+        <Input name="email" type="email" placeholder="Email" required/>
         <TextArea name="message" maxLength="1000" />
         <Button type="submit">Send</Button>
       </Form>
