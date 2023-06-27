@@ -26,20 +26,23 @@ export const Contact = () => {
     event.preventDefault();
     let form = Object.fromEntries(new window.FormData(event.target));
     setFields(form)
-    const res = createMessage(fields);
+    console.log(form)
+    console.log(fields)
+    const res = createMessage(form);
     setMessageStatus(res)
     event.target.reset();
   };
   return (
     <Wrrapper>
+      <Title2>{JSON.stringify(fields)}</Title2>
       <Form onSubmit={handleSubmit}>
         <Title2 style={{ marginBottom: "0px" }}>Get in touch</Title2>
         <Input name="name" type="text" placeholder="Full name" />
-        <Input name="email" type="email" placeholder="Email" required/>
+        <Input name="email" type="email" placeholder="Email" required />
         <TextArea name="message" maxLength="1000" />
         <Button type="submit">Send</Button>
       </Form>
-      {messageStatus ? <Modal fields={fields}/> : ""}
+      {messageStatus ? <Modal fields={fields} /> : ""}
     </Wrrapper>
   );
 };

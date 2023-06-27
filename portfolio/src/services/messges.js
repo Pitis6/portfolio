@@ -9,6 +9,7 @@ const createMessage = async (message) => {
     }
   const res = await fetch(`http://18.188.241.122/messages`, settings);
 //   const data = await res.json();
+console.log(res)
   return res.status === 201 ? true : false;
 }
 
