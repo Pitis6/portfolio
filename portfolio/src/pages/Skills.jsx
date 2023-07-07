@@ -18,7 +18,7 @@ export const Skills = () => {
     ],
     back: [
       "POO",
-      "Java",
+      "Java SE",
       "Spring Boot",
       "Spring MVC",
       "Spring Data",

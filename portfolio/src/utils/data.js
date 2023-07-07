@@ -24,11 +24,11 @@ export const data = [
     url: "http://todoappdh.s3-website.us-east-2.amazonaws.com",
   },
   {
-    title: "Swagger",
+    title: "audiophile API",
     description:
-      "",
-    image: "",
-    videoPath: "",
-    url: "http://todoappdh.s3-website.us-east-2.amazonaws.com",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at, ducimus magnam ullam optio qui deserunt sunt magni repellat minima! Corporis error, modi unde ad praesentium vel cupiditate aut sed!",
+    image: "audioPhileApi.png",
+    videoPath: "audioPhileApi.png",
+    url: "http://3.21.158.170/doc/swagger-ui/index.html",
   },
 ];

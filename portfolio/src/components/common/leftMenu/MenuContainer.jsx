@@ -16,10 +16,6 @@ export const MenuContainer = () => {
       route: "/proyects",
     },
     {
-      label: "Education",
-      route: "/education",
-    },
-    {
       label: "Skills",
       route: "/skills",
     },
