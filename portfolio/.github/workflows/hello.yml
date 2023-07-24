@@ -1,0 +1,14 @@
+name: CI/CD porfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  system:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Echo the message
+        run: |
+         echo "Corriendo"
