@@ -10,7 +10,7 @@ export const MenuItem = ({ item }) => {
 
   useEffect(() => {
     pathname === item.route ? setIsActive(true) : setIsActive(false);
-  }, [pathname]);
+  }, [pathname, item.route]);
 
   return (
     <Wrapper>
