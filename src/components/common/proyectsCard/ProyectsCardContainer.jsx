@@ -1,14 +1,15 @@
 import { data } from "../../../utils/data"
 import { ProyectsCard } from "./ProyectsCard"
+import  random  from "../../../services/randomSet"
 
-const randomIndex = Math.floor(Math.random()*3)
-console.log(randomIndex)
+
 export const ProyectsCardContainer = () => {
-  return (
-    data.map((item,index) => ( 
-      <ProyectsCard key={item.title} data={item} index={index}/>
-    ))
-  )
+
+const randomProyect = random()
+
+  return randomProyect.map((item) => (
+    <ProyectsCard key={data[item].title} data={data[item]} index={item} />
+  ));
 }
 
 

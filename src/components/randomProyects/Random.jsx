@@ -25,13 +25,11 @@ export const Random = () => {
 }
 
 const RandomProyects = styled.section`
-/* width: 100vw; */
 display: flex;
 flex-direction: column;
 gap: 100px;
 background-color: black;
 padding: 150px;
-/* border: solid white; */
 `
 
 const Separator = styled.div`
